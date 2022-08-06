@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklamaau=self.webpackChunklamaau||[]).push([[2301],{9668:a=>{a.exports=JSON.parse('{"label":"facebook","permalink":"/lamaau/blog/tags/facebook","allTagsPath":"/lamaau/blog/tags","count":1}')}}]);
