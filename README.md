@@ -1,14 +1,14 @@
-# Boilerpolate SaaS Laravel
+# Lamaau.space
 
-Simple Design but Powerfull, can save your time for your own SaaS
+Lamaau is not La - Mau in arabics :v
 
 ## Tech stack:
 
-Astro, React, Tailwind, Nodejs, Framer Motion
+Astro, Tailwind
 
 ## Live link
 
-[https://boilerpolate.store/](https://boilerpolate.store/)
+[https://lamaau.space/](https://lamaau.space/)
 
 ## Project Structure
 
@@ -17,7 +17,6 @@ Astro, React, Tailwind, Nodejs, Framer Motion
 │   └── favicon.svg
 ├── src/
 │   ├── assets
-│   │   └── logos
 │   ├── components
 │   ├── layouts
 │   ├──  pages
