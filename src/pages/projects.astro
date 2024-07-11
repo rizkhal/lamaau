@@ -1,0 +1,110 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Portofolio from "../components/Portofolio.astro";
+---
+
+<Layout title="Lamaau - lamaau.space">
+  <section class="pt-[4em] md:py-[5em]">
+    <div
+      aria-hidden="true"
+      class="absolute -z-10 inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+    >
+      <div
+        class="blur-[106px] h-56 bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500"
+      >
+      </div>
+      <div
+        class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"
+      >
+      </div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 py-4 lg:px-8">
+      <div class="text-center max-w-3xl md:mx-auto mb-10 md:mb-12">
+        <div
+          class="gradient-text font-bold font-heading mb-4 text-4xl md:text-5xl"
+        >
+          <h2 class="py-2">Proyek dari kami untuk Client tercinta</h2>
+        </div>
+        <p
+          class="text-gray-700 text-lg max-w-3xl mx-auto sm:text-center leading-relaxed"
+        >
+          Showcase ini merupakan pilihan dari berbagai macam proyek yang pernah
+          kami kerjakan untuk client yang kami cintai
+        </p>
+      </div>
+      <div class="flex flex-col space-y-32">
+        <Portofolio
+          title="Hadirin Hadiran"
+          summary="Aplikasi absensi untuk monitoring kehadiran karyawan tercinta anda wahai para pemilik perusahaan"
+          features={[
+            {
+              label: "Mobile app",
+              summary:
+                "Mobile apps khusus absensi dengan lokasi yang mudah diatur sesuai polygon yang digambar dihalaman admin",
+            },
+            {
+              label: "Laporan kehadiran",
+              summary:
+                "Laporan kehadiran dengan tampilan yang family friendly untuk anda admin tersayang",
+            },
+          ]}
+        />
+
+        <Portofolio
+          reverse
+          title="Aplikasi buat monitor hafalan Quran"
+          summary="Sudahi maksiatmu, mari menghafal Al-Quran bersama aplikasi ini yang kami persembahkan untuk lembaga pendidikan formal dan non formal"
+          features={[
+            {
+              label: "Mobile app",
+              summary:
+                "Mobile apps wali murid untuk monitoring progres hafalan",
+            },
+            {
+              label: "Laporan progres hafalan",
+              summary:
+                "Laporan progresnya mantap kali lur, ada excel, pdf dan sertifikat juga loh lur",
+            },
+          ]}
+        />
+
+        <Portofolio
+          title="Gatau mau kasih nama apa"
+          summary="Yang jelas aplikasi ini dipakai swasta buat pre order sparepart alat berat dan manajemen proyek"
+          features={[
+            {
+              label: "Mobile app",
+              summary:
+                "Mobile apps khusus direktur untuk peresetujuan pre order barang, soalnya direkturnya jarang dikantor haha",
+            },
+            {
+              label: "Laporan penggunaan barang",
+              summary:
+                "Laporan penggunaan sparepart berdasarkan alat berat dan proyek yang banyak ngabisin duit perusahaan",
+            },
+          ]}
+        />
+
+        <Portofolio
+          reverse
+          title="Aplikasi Buat bayar SPP"
+          summary="Buat lembaga pendidikan manajemen pembayaran SPP, ada fitur uang kas masuk dan keluar juga loh lur haha"
+          features={[
+            {
+              label: "Pemasukan dan pengeluaran",
+              summary:
+                "Kategorikan pemasukan dan pengeluaran dengan dinamis dan seksi, dilaporannya ada visualisasi dalam bentuk grafik yang ga bikin sakit mata",
+            },
+            {
+              label: "Gatau ini mau ngisi apa",
+              summary:
+                "Ini gua tulis biar pas aja semua ada dua yang bagian keterangannya hahah",
+            },
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

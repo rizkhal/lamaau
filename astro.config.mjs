@@ -10,11 +10,8 @@ export default defineConfig({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
-
   output: "static",
-
   site: "https://lamaau.space",
-
   experimental: {
     contentCollections: true,
   },

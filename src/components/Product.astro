@@ -1,5 +1,6 @@
 ---
 import { Picture } from "@astrojs/image/components";
+import Button from "../components/Button.astro";
 ---
 
 <section id="products" class="pt-[4em] md:py-[10em]">
@@ -81,7 +82,8 @@ import { Picture } from "@astrojs/image/components";
                   ribet bolak balik platform.
                 </p>
               </div>
-            </div><div class="flex">
+            </div>
+            <div class="flex">
               <div class="flex-shrink-0">
                 <div
                   class="flex items-center justify-center rounded-full bg-pink-500 h-7 text-gray-50 w-7"
@@ -125,6 +127,9 @@ import { Picture } from "@astrojs/image/components";
             />
           </div>
         </div>
+      </div>
+      <div class="w-full flex justify-end mt-10">
+        <Button text={"Lihat proyek lainnya"} />
       </div>
     </div>
   </div>

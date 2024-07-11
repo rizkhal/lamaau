@@ -1,0 +1,69 @@
+---
+import Button from "./Button.astro";
+import { Picture } from "@astrojs/image/components";
+
+const { reverse, title, summary, features } = Astro.props;
+
+type FeatureProps = { label: string; summary: string };
+---
+
+<div class="mx-auto max-w-6xl md:px-8 p-4">
+  <div class={`md:gap-12 md:flex ${reverse ? "flex-row-reverse" : ""}`}>
+    <div class="md:basis-1/2 mt-2">
+      <div class="text-gray-700 mb-6">
+        <h1 class="text-2xl font-semibold">{title}</h1>
+        <p class="leading-relaxed text-slate-600">{summary}</p>
+      </div>
+      <div class="space-y-5">
+        {
+          features.map((row: FeatureProps) => (
+            <div class="flex">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-fuchsia-500 text-gray-50 w-5 h-5 mt-1">
+                  <svg
+                    astro-icon="tabler:check"
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="m5 12 5 5L20 7"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="font-semibold leading-6 text-gray-700 text-lg">
+                  {row.label}
+                </h3>
+                <p class="dark:text-slate-400 text-slate-700 mt-2">
+                  {row.summary}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="mt-8">
+        <Button text="Live Demo" />
+      </div>
+    </div>
+    <div class="md:basis-1/2 md:mt-0 mt-10" aria-hidden="true">
+      <div
+        class="rounded-xl relative bg-white border-2 border-black before:block before:absolute before:-inset-1 before:-z-10 before:mt-2 before:ml-2 before:-mb-2 before:-mr-2 before:rounded-xl before:bg-pink-400"
+      >
+        <Picture
+          src={import("../assets/products/default.avif")}
+          alt="Tagihan Digital"
+          widths={[200, 300, 800]}
+          sizes="(max-width: 100%)"
+          class="w-full rounded-xl"
+        />
+      </div>
+    </div>
+  </div>
+</div>
